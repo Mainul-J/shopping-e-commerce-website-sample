@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+<!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome icon -->
+    <script src="https://kit.fontawesome.com/ef4cd9f538.js" crossorigin="anonymous"></script>
+<!-- style -->
+    <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+--color-Primary: #2563EB (Blue)
+--color-Secondary: #1E40AF
+--color-background: #FFFFFF
+--color-text: #111827
+--color-button: #F97316
+    }
+    .hover{
+        @apply hover:text-white;
+    }
+    .active{
+      @apply text-blue-600 ;
+    }
+    </style>
+
+</head>
+<body >
+    <header>
+        <nav >
+            <div class="navbar bg-base-100 shadow-sm">
+                <div class="w-9/12 mx-auto flex ">
+                      <div class="navbar-start">
+
+    <a class="text-xl">SwiftCart</a>
+  </div>
+  <div class="navbar-center hidden lg:flex rounded hover:bg-gray-300">
+    <ul class="menu menu-horizontal px-10 rounded">
+        <li class="hover"><a href="#home">Home</a></li>
+        <li class="hover"><a href="#products">Products</a></li>
+        <li class="hover"><a href="#about">About</a></li>
+        <li class="hover"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end ">
+    <a id="shopping-cart" class="btn relative"><i class=" fa-solid fa-cart-arrow-down"></i><span id="cart-count" class="text-xl absolute top-3 right-1">0</span></a>
+
+        <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="-1"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-28 p-2 shadow bg-slate-400 ">
+        <li class="hover active"><a href="#home">Home</a></li>
+        <li class="hover"><a href="#products">Products</a></li>
+        <li class="hover"><a href="#about">About</a></li>
+        <li class="hover"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="mt-1">
+            <div
+  class="hero h-[480px] lg:h-[820px] object-cover lg:object-contain"
+  style="background-image: url(./Assets/banner-image.png);"
+>
+  <div class="hero-overlay"></div>
+  <div class=" text-neutral-content w-9/12 mx-auto lg:px-1">
+    <div class="">
+     <h1 class="mb-8 text-4xl font-bold">Best Collection For You</h1>
+      <p class="mb-5">
+        Discover the best latest trends in faction, electronics, and more.Shope with confidence and style at SwiftCart.
+      </p>
+      <button class="btn btn-primary hover:bg-sky-900 text-white">Shope Now</button>
+    </div>
+  </div>
+</div>
+        </section>
+        <!-- why choose us -->
+        <section class="bg-gray-200">
+          <h1 class="text-4xl my-14 font-bold text-center ml-2">why choose us</h1>
+          <div id="choose" class=" relative grid grid-cols-1 md:grid-cols-2 gap-10 w-9/12 mx-auto lg:grid-cols-3">
+            
+            
+              
+<div class="card bg-base-100 w-full shadow-sm mb-5">
+  <figure class="pt-6">
+    <div class="bg-blue-100 p-3 rounded text-blue-600 text-4xl absolute -top-8 left-5">
+      <i class="fa-solid fa-truck "></i>
+    </div>
+  </figure>
+  <div class="card-body mb-1">
+    <h2 class="card-title">Fast Delivery</h2>
+    <p>Get your orders delivered to your doorstep quickly and efficiently</p>
+  </div>
+</div>
+
+<!-- card-2 -->
+<div class="card bg-base-100 shadow-sm mb-5">
+  <figure class="pt-6">
+    <div class="bg-blue-100 p-3 rounded text-blue-600 text-4xl absolute -top-8 left-5">
+      <i class="fa-solid fa-headset"></i>
+    </div>
+  </figure>
+  <div class="card-body mb-1">
+    <h2 class="card-title">24/7 Support</h2>
+    <p>Our support team is available around the clock to assist you.</p>
+  </div>
+</div>
+<!-- card-3 -->
+ <div class="card bg-base-100 shadow-sm mb-5">
+  <figure class="pt-6">
+    <div class="bg-blue-100 p-3 rounded text-blue-600 text-4xl absolute -top-8 left-5">
+      <i class="fa-solid fa-shield"></i>
+    </div>
+  </figure>
+  <div class="card-body mb-1">
+    <h2 class="card-title">Secure Payment</h2>
+    <p>Experience safe and secure transaction with our encrypted payment systems.</p>
+  </div>
+</div>
+            </div>
+        </section>
+
+        <!-- trending section -->
+        <section id="" class="bg-gray-200" >
+            <div class="w-9/12 mx-auto">
+              <h1 class="text-5xl text-slate-700 font-bold my-10 pt-10">Trending Now</h1>
+            </div>
+            <div id="trend" class="w-9/12 mx-auto grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class=" bg-slate-500">
+  <section class="footer-main grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-slate-500 text-white gap-4  py-5 w-9/12 mx-auto
+  ">
+    <!-- 1st div -->
+    <div class="">
+      <h1 class="text-3xl font-bold text-blue-400">SwiftCart</h1>
+      <p class="">You one-stop shop for all your fashion and life style needs. Quality products, fast delivery, and excellent support.</p>
+    </div>
+    <!-- 2nd div -->
+    <div>
+      <ul>
+        <h1 class="mb-2 font-semibold text-2xl">QUICK LINKS</h1>
+        <li><a id="li-1" href="">Home</a></li>
+        <li><a id="li-2" href="">Products</a></li>
+        <li><a id="li-3" href="">About</a></li>
+        <li><a id="li-4" href="">Contact</a></li>
+      </ul>
+    </div>
+    <!-- 3rd div -->
+    <div>
+      <ul>
+        <h1 class="mb-2 text-2xl font-semibold">SUPPORT</h1>
+        <li>FAQ</li>
+        <li>Shipping</li>
+        <li>Returns</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+<!-- 4th div -->
+    <div>
+      <h1 class="text-sm font-medium">SUBSCRIBE TO OUR NEWSLETTER</h1>
+      <P>The latest news, articles, and resources, sent to your inbox weekly</P>
+      <div class="flex gap-3">
+        <input class="p-2 font-medium" placeholder="Enter your email" type="text" class="">
+        <button class="btn">Subscribe</button>
+      </div>
+      
+    </div>
+  </section>
+</footer>
+
+
+<!-- <h1 class="mb-8 text-2xl font-bold">Best Collection For You</h1>
+      <p class="mb-5">
+        Discover the best latest trends in faction, electronics, and more.Shope with confidence and style at SwiftCart.
+      </p>
+      <button class="btn btn-primary hover:bg-sky-900 text-white">Shope Now</button> -->
+
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+<dialog id="my_modal_2" class="modal">
+  <div id="modal-box" class="modal-box  bg-slate-300">
+    <!-- <div class="card card-side bg-base-100 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+      alt="Movie" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">New movie is released!</h2>
+    <p>Click the button to watch on Jetflix app.</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Watch</button>
+    </div>
+  </div>
+</div> -->
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+
+    <!-- Drawer sidebar -->
+    <div class="drawer drawer-end">
+  <input id="my-drawer-5" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+    <!-- <label for="my-drawer-5" class="drawer-button btn btn-primary">Open drawer</label>  -->
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer-5" aria-label="close sidebar" class="drawer-overlay"></label>
+    
+    <ul id="cart-container" class="menu bg-base-200 min-h-full w-96 p-4 gap-4">
+      <!-- Sidebar content here -->
+      <!-- <li class="font-bold text-center text-xl">Selected Products</li> -->
+
+    </ul>
+  </div>
+</div>
+    <script src="./script/home.js"></script>
+</body>
+</html>
+

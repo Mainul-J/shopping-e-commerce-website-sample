@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+<!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome icon -->
+    <script src="https://kit.fontawesome.com/ef4cd9f538.js" crossorigin="anonymous"></script>
+<!-- style -->
+    <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+--color-Primary: #2563EB (Blue)
+--color-Secondary: #1E40AF
+--color-background: #FFFFFF
+--color-text: #111827
+--color-button: #F97316
+    }
+    .hover{
+        @apply hover:text-white;
+    }
+    .active{
+        @apply bg-red-500 text-white
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+            <nav >
+            <div class="navbar bg-base-100 shadow-sm">
+                <div class="w-9/12 mx-auto flex ">
+                      <div class="navbar-start">
+
+    <a class="text-xl">SwiftCart</a>
+  </div>
+  <div class="navbar-center hidden lg:flex rounded hover:bg-gray-300">
+    <ul class="menu menu-horizontal px-10 rounded">
+        <li class="hover"><a href="#home">Home</a></li>
+        <li class="hover"><a href="#products">Products</a></li>
+        <li class="hover"><a href="#about">About</a></li>
+        <li class="hover"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end ">
+    <a id="shopping-cart" class="btn relative"><i class=" fa-solid fa-cart-arrow-down"></i><span id="cart-count" class="text-xl absolute top-3 right-1">0</span></a>
+
+        <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="-1"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-28 p-2 shadow bg-slate-400 ">
+        <li class="hover"><a href="#home">Home</a></li>
+        <li class="hover"><a href="#products">Products</a></li>
+        <li class="hover"><a href="#about">About</a></li>
+        <li class="hover"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="category-btn" class="mt-8 w-9/12 mx-auto border">
+            <div id="btn-all " class="btn active">All</div>
+        </section>
+        <section>
+            <div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+    
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+<dialog id="my_modal_2" class="modal">
+  <div id="modal-box" class="modal-box  bg-slate-300">
+    <!-- <div class="card card-side bg-base-100 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+      alt="Movie" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">New movie is released!</h2>
+    <p>Click the button to watch on Jetflix app.</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Watch</button>
+    </div>
+  </div>
+</div> -->
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+
+    <!-- Drawer sidebar -->
+    <div class="drawer drawer-end">
+  <input id="my-drawer-5" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+    <!-- <label for="my-drawer-5" class="drawer-button btn btn-primary">Open drawer</label>  -->
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer-5" aria-label="close sidebar" class="drawer-overlay"></label>
+    
+    <ul id="cart-container" class="menu bg-base-200 min-h-full w-96 p-4 gap-4">
+      <!-- Sidebar content here -->
+      <!-- <li class="font-bold text-center text-xl">Selected Products</li> -->
+
+    </ul>
+  </div>
+</div>
+        <script src="./script/products.js"></script>
+        <script src="./script/home.js"></script>
+</body>
+</html>
