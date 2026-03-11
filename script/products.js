@@ -82,25 +82,37 @@ const displayProducts = (products) =>{
     const productsDiv = document.getElementById('section-cards');
     console.log(productsDiv);
     productsDiv.innerHTML = '';
-    products.forEach(el => {
+    products.forEach(product => {
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card bg-red-100 w-96 h-[500px]  shadow-sm">
-  <figure class="p-10">
+        <div class="card bg-base-100 shadow-sm p-4 bg-gray-400">
+  <figure class="bg- rounded p-1">
     <img
-      src=${el.image}
-      alt="Shoes" class="h-[350px] object-contain w-full p-10" />
+      src="${product.image}"
+      alt="Shoes"
+      class="rounded-xl p-10 w-[300px] h-[400px] border-white border-b border-t" />
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">${el.title.slice(0,40)}</h2>
-    <p class="text-xl font-medium">$${el.price}</p>
-    <div class="card-actions justify-between">
-      <button onclick="loadDetails(${el.id})" class="btn btn-primary">Details</button>
-      <button onclick="loadAdd(${el.id})" class="btn btn-primary">Add</button>
+  <div class="items-center border-white">
+    <div class="flex  pt-1 justify-between ">
+        <h2 class="bg-blue-300 text-white px-2 rounded font-semibold">${product.category}</h2>
+        <h2 class="bg-blue-300 px-2 text-white rounded font-medium"><i class="fa-regular fa-star p-1 text-orange-300"></i>${product.rating?.rate} <span>(${product.rating?.count})</span></h2>
+
     </div>
-  </div>
-</div>
-        `;
+    <div class="grid gap-2 pt-2">
+        <h2 class="font-semibold text-white">${product.title.slice(0,30)}</h2>
+        <h2 class="font-semibold text-white">$${product.price}</h2>
+    </div>
+    <div  class="flex justify-between pt-1">
+        <button onclick="loadDetails(${product.id})" class="btn bg-blue-400 text-white">
+        <i class="fa-solid fa-eye"></i> Details
+    </button>
+
+        <button onclick="loadCart(${product.id})" class="btn bg-blue-400 text-white"><i class="fa-solid fa-cart-shopping"></i>Add</button>
+    </div>
+    </div>
+    </div>
+`;
+
 
     // <p>${el.description.slice(0, 100)}</p>
     productsDiv.appendChild(div)
