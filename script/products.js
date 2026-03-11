@@ -23,13 +23,22 @@ try {
 
 const displayCatBtns = (categories) =>{
     const categoryContainer = document .getElementById('category-btn');
+    removeActive()
+    const allBtn = document.createElement('button')
+    allBtn.textContent = 'All'
+    allBtn.className = 'btn active'
+    categoryContainer.append(allBtn)
     console.log(categoryContainer);
     for (const category of categories) {
         console.log(category);
-
-
-
-
+    const btn = document.createElement('button');
+    btn.textContent = category;
+    btn.className = 'btn';
+    btn.addEventListener('click',()=>{
+        removeActive()
+        btn.classList.add('active')
+    })
+    categoryContainer.append(btn)
     }
 }
 
