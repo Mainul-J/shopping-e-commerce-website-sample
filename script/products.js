@@ -94,7 +94,7 @@ const displayProducts = (products) =>{
   </figure>
   <div class="items-center border-white">
     <div class="flex  pt-1 justify-between ">
-        <h2 class="bg-blue-300 text-white px-2 rounded font-semibold">${product.category}</h2>
+        <h2 class="bg-blue-300 text-white px-2 rotunded font-semibold">${product.category}</h2>
         <h2 class="bg-blue-300 px-2 text-white rounded font-medium"><i class="fa-regular fa-star p-1 text-orange-300"></i>${product.rating?.rate} <span>(${product.rating?.count})</span></h2>
 
     </div>
