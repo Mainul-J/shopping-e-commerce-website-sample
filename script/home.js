@@ -177,7 +177,6 @@ const displayItemInDrawer = (items) =>{
 // display trending section dynamically by using api 
 const displayTrend = (arrays) => {
     const trendContainer = document.getElementById('trend');
-    console.log(trendContainer);
     // Collect hightest 3 rating products
     //products in an array 
     const products = [...arrays].sort((a,b)=>b.rating.rate - a.rating.rate) ;
